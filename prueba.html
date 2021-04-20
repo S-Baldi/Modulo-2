@@ -7,7 +7,7 @@
   <title>Prueba Modulo 2</title>
 </head>
 <body>
-  <h3>Ingresar 3 valores</h3>
+  <h1>Ingresar 3 valores</h1>
   <label for="numero">Numero 1:</label>
   <input type="number" id="valor1">
 
@@ -40,5 +40,86 @@
       }
     }
   </script>
+
+
+<h1>Ingresar dos números</h1>
+
+<label for="numero">Numero 1</label>
+<input type="number" id="sumar1">
+
+<label for="numero">Numero 2</label>
+<input type="number" id="sumar2">
+
+<button onclick="sumar()">Sumar</button>
+  <h4>Resultado de la suma</h4>
+  <input id="suma">
+
+<script>
+  function sumar() {
+    valor1 = parseFloat(document.getElementById("sumar1").value);
+    valor2 = parseFloat(document.getElementById("sumar2").value);
+
+    document.getElementById("suma").value=valor1+valor2
+
+  }
+</script>
+
+
+<h1>Ingresar 4 valores</h1>
+  <label for="numero">Numero 1:</label>
+  <input type="number" id="mm1">
+
+  <label for="numero">Numero 2:</label>
+  <input type="number" id="mm2">
+
+  <label for="numero">Numero 3:</label>
+  <input type="number" id="mm3">
+
+  <label for="numero">Numero 4:</label>
+  <input type="number" id="mm4">
+
+  <button onclick="mayormenor()">Mayor y Menor</button>
+    <h4>Numero mayor</h4>
+    <input id="mayor">
+    <h4>Numero menor</h4>
+    <input id="menor">
+
+  <script>
+    function mayormenor() {
+      may1=parseFloat(document.getElementById("mm1").value);
+      may2=parseFloat(document.getElementById("mm2").value);
+      may3=parseFloat(document.getElementById("mm3").value);
+      may4=parseFloat(document.getElementById("mm4").value);
+
+      if (may1>may2 && may1>may3 && may1>may4) {
+        document.getElementById("mayor").value=may1
+      }
+      else if (may2>may1 && may2>may3 && may2>may4) {
+        document.getElementById("mayor").value=may2
+      }
+      else if (may3>may1 && may3>may2 && may3>may4) {
+        document.getElementById("mayor").value=may3
+      }
+      else (may4>may1 && may4>may2 && may4>may3) {
+        document.getElementById("mayor").value=may4
+      }
+
+      if (may1<may2 && may1<may3 && may1<may4) {
+        document.getElementById("menor").value=may1
+      }
+      else if (may2<may1 && may2<may3 && may2<may4) {
+        document.getElementById("menor").value=may2
+      }
+      else if (may3<may1 && may3<may2 && may3<may4) {
+        document.getElementById("menor").value=may3
+      }
+      else (may4<may1 && may4<may2 && may4<may3) {
+        document.getElementById("menor").value=may4
+      }
+    
+    }
+  </script>
+
+
 </body>
 </html>
